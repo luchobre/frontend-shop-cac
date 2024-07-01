@@ -13,7 +13,9 @@ const ProductGridItem = ({ product }: Props) => {
     const [displayImage, setDisplayImage ] = useState (product.images[0]);
 
 const handleImageEnter = () => {
-    setDisplayImage(product.images[1])
+    if (product.images[1]) {
+      setDisplayImage(product.images[1])
+    }
 }
 const handleImageLeave = () => {
     setDisplayImage(product.images[0])

@@ -2,7 +2,7 @@
 import React, { useState, useEffect, ChangeEvent, FormEvent } from 'react';
 import Swal from 'sweetalert2';
 
-const BASEURL = 'https://luchobre.pythonanywhere.com/products';
+const BASEURL = 'https://luchobre.pythonanywhere.com/';
 
 type ValidSizes = 'XS' | 'S' | 'M' | 'L' | 'XL';
 type ValidTypes = 'shirts' | 'pants' | 'accessories';
@@ -51,7 +51,7 @@ const ShopProductForm: React.FC = () => {
   const [form, setForm] = useState<Product>({
     id: undefined,
     description: '',
-    images: [''],
+    images: ['https://imgur.com/'],
     inStock: 0,
     price: 0,
     sizes: ['M'],
