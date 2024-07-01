@@ -2,7 +2,7 @@
 import React, { useState, useEffect, ChangeEvent, FormEvent } from 'react';
 import Swal from 'sweetalert2';
 
-const BASEURL = 'http://127.0.0.1:5000';
+const BASEURL = 'https://luchobre.pythonanywhere.com/products';
 
 type ValidSizes = 'XS' | 'S' | 'M' | 'L' | 'XL';
 type ValidTypes = 'shirts' | 'pants' | 'accessories';

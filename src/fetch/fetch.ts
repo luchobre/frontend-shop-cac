@@ -8,7 +8,7 @@ const useProductFetcher = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:5000/products");
+        const response = await fetch("https://luchobre.pythonanywhere.com/products");
         if (!response.ok) {
           throw new Error(`Error fetching products: ${response.statusText}`);
         }
