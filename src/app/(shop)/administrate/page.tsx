@@ -51,7 +51,7 @@ const ShopProductForm: React.FC = () => {
   const [form, setForm] = useState<Product>({
     id: undefined,
     description: '',
-    images: ['https://imgur.com/'],
+    images: ['https://i.imgur.com/'],
     inStock: 0,
     price: 0,
     sizes: ['M'],
@@ -116,7 +116,7 @@ const ShopProductForm: React.FC = () => {
     setForm({
       id: undefined,
       description: '',
-      images: [''],
+      images: ['https://i.imgur.com/'],
       inStock: 0,
       price: 0,
       sizes: ['M'],
