@@ -21,7 +21,7 @@ interface Product {
   gender: 'men' | 'women' | 'kid' | 'unisex';
 }
 
-async function fetchData(url: string, method: string, data: object | null = null) {
+async function fetchData<t>(url: string, method: string, data: object | null = null) {
   const options = {
     method: method,
     headers: {
@@ -81,11 +81,12 @@ const ShopProductForm: React.FC = () => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     try {
-      let data;
+      let data: Product | undefined; // Aquí defines el tipo explícitamente, ajusta 'Product' según corresponda
+  
       if (form.id) {
-        data = await fetchData(`${BASEURL}/products/${form.id}`, 'PUT', form);
-        if (data && typeof data === 'object') {
-          setProducts(products.map(product => (product.id === form.id ? data : product)));
+        data = await fetchData<Product>(`${BASEURL}/products/${form.id}`, 'PUT', form);
+        if (data) {
+          setProducts(products.map(product => (product.id === form.id ? data! : product)));
           Swal.fire({
             title: 'Actualizado!',
             text: 'Producto actualizado correctamente.',
@@ -94,8 +95,8 @@ const ShopProductForm: React.FC = () => {
           });
         }
       } else {
-        data = await fetchData(`${BASEURL}/products`, 'POST', form);
-        if (data && typeof data === 'object') {
+        data = await fetchData<Product>(`${BASEURL}/products`, 'POST', form);
+        if (data) {
           setProducts([...products, data]);
           Swal.fire({
             title: 'Agregado!',
