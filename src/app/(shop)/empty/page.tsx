@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { IoCartOutline } from "react-icons/io5";
 
-export default function () {
+const EmptyPage = () => {
     return (
         <div className="flex justify-center items-center h-[800px]">
             <IoCartOutline 
@@ -19,3 +19,5 @@ export default function () {
         </div>
     )
 }
+
+export default EmptyPage

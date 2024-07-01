@@ -12,7 +12,7 @@ interface Props {
     }
 }
 
-export default function ({params}: Props) {
+const OrdersId = ({params}: Props) => {
     const {id} = params;
 
     const {products, isLoading} = useProductFetcher()
@@ -118,3 +118,6 @@ export default function ({params}: Props) {
     </div>
   );
 }
+
+
+export default OrdersId;

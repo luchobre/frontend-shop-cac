@@ -5,7 +5,7 @@ import Link from "next/link";
 import useProductFetcher from "@/fetch/fetch";
 import { MoonLoader } from "react-spinners";
 
-export default function () {
+const CheckoutPage = () => {
 
   const {products, isLoading} = useProductFetcher();
 
@@ -103,3 +103,6 @@ export default function () {
     </div>
   );
 }
+
+
+export default CheckoutPage;

@@ -3,7 +3,7 @@ import Title from '@/components/Ui/title/Title';
 import Link from 'next/link';
 import { IoCardOutline } from 'react-icons/io5';
 
-export default function() {
+const Orders = () => {
   return (
     <>
       <Title title="Orders" subtitle='' className=''/>
@@ -74,3 +74,5 @@ export default function() {
     </>
   );
 }
+
+export default Orders;

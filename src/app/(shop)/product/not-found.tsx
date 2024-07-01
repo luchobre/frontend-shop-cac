@@ -1,6 +1,6 @@
 import PageNotFound from "@/components/Ui/not-found/PageNotFound";
 
-export default function () {
+const NotFoundSlug = () => {
 
 
 
@@ -10,3 +10,5 @@ export default function () {
         </div>
     )
 }
+
+export default NotFoundSlug;

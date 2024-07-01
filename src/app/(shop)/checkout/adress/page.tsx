@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Title from '@/components/Ui/title/Title';
 
-export default function () {
+const AdressPage = () => {
   return (
     <div className="flex flex-col sm:justify-center sm:items-center mb-72 px-10 sm:px-0">
 
@@ -104,3 +104,5 @@ export default function () {
     </div>
   );
 }
+
+export default AdressPage;

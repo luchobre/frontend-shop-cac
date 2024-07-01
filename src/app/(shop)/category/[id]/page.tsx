@@ -1,6 +1,5 @@
 'use client'
 import { notFound } from "next/navigation";
-import { initialData } from "@/seed/seed";
 import Title from "@/components/Ui/title/Title";
 import ProductGrid from "@/components/Products/product-grid/ProductGrid";
 import { Category } from "@/interfaces";
@@ -13,7 +12,7 @@ interface Props {
 }
 
 
-export default function ({ params }: Props) {
+const CategoryId = ({ params }: Props) => {
   const { id } = params;
   const {products, isLoading} = ProductFetcher();
 
@@ -38,3 +37,5 @@ export default function ({ params }: Props) {
     </>
   );
 }
+
+export default CategoryId;
