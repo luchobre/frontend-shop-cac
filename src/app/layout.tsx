@@ -4,8 +4,8 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "Shop",
-  description: "Created by Luciano Bregoli",
+  title: "Codo a Codo | Shop",
+  description: "Proyecto creado para Codo a Codo",
 };
 
 export default function RootLayout({
