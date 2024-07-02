@@ -1,7 +1,7 @@
 'use client'
 import Link from "next/link"
 import { titleFont } from "@/config/fonts"
-import { IoCartOutline, IoSearchOutline } from "react-icons/io5"
+import { IoCartOutline, IoCreateOutline, IoSearchOutline } from "react-icons/io5"
 import { useUIStore } from "@/store"
 
 const TopMenu = () => {
@@ -28,7 +28,7 @@ const TopMenu = () => {
       {/* Search, Cart, Menu */}
       <div className="flex items-center">
         <Link href='/administrate' className="mx-2">
-          Administrar productos
+        <IoCreateOutline size={25} />
         </Link>
         <Link href='/search'>
           <IoSearchOutline className="w-5 h-5"/>
